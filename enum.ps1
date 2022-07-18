@@ -46,13 +46,6 @@ $standard_commands = [ordered]@{
     'Startup Commands'                            = 'Get-CimInstance Win32_StartupCommand | select Name, command, Location, User | fl';
     
 }
-
-$extended_commands = [ordered]@{
-
-    'Searching HKLM for passwords'             = 'reg query HKLM /f password /t REG_SZ /s | Out-File C:\temp\hklmpasswords.txt';
-    'Searching HKCU for passwords'             = 'reg query HKCU /f password /t REG_SZ /s | Out-File C:\temp\hkcupasswords.txt';
-    
-}
 function RunCommands($commands) {
     ForEach ($command in $commands.GetEnumerator()) {
         whost $command.Name

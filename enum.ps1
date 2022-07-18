@@ -11,7 +11,9 @@ function whost($a) {
 
 whost "Windows Enumeration Script v 0.1
           by absolomb
-       www.sploitspren.com"
+       www.sploitspren.com
+       
+       Modifié par Kaarm et Remy pour un projet scolaire"
 
 $standard_commands = [ordered]@{
 
